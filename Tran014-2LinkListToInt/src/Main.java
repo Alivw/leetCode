@@ -11,7 +11,7 @@ public class Main {
         ListNode head = new ListNode();
         ListNode list = head;
         for (int i = 0; i < num.length(); i++) {
-            list.next = new ListNode(Integer.parseInt(num.substring(i, i + 1)));
+            list.next = new ListNode((int) num.charAt(i)-48);  // '1' ascii=49
             list = list.next;
         }
         System.out.println(getDecimalValue(head));
