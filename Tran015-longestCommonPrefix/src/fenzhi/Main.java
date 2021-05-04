@@ -15,11 +15,12 @@ public class Main {
         if (null == strs || strs.length == 0) {
             return "";
         }
+
         return longestCommonPrefix(strs, 0, strs.length - 1);
     }
 
     private static String longestCommonPrefix(String[] strs, int start, int end) {
-        if (start == end) {
+        if (start >= end) {
             return strs[start];
         }else {
             int mid = start + (end - start) / 2;
@@ -35,6 +36,7 @@ public class Main {
             if (lcpLeft.charAt(i) != lcpRight.charAt(i)) {
                 return lcpLeft.substring(0, i);
             }
+
         }
         return lcpLeft.substring(0, minLen);
     }
