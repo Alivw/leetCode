@@ -31,7 +31,8 @@ public class Main {
     }
 
     private static String commonPrefix(String lcpLeft, String lcpRight) {
-        int minLen = Math.min(lcpLeft.length(), lcpRight.length());
+//        int minlen = Math.min(lcpLeft.length(), lcpRight.length());
+        int minLen = lcpLeft.length() <= lcpRight.length() ? lcpLeft.length() : lcpRight.length();
         for (int i = 0; i < minLen; i++) {
             if (lcpLeft.charAt(i) != lcpRight.charAt(i)) {
                 return lcpLeft.substring(0, i);
