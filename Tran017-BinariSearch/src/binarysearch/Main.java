@@ -1,5 +1,7 @@
 package binarysearch;
 
+import java.util.Arrays;
+
 /**
  * @Description:
  * @Author: Awei
