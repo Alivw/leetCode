@@ -1,10 +1,5 @@
 package demo1;
 
-import com.sun.javafx.sg.prism.NGAmbientLight;
-import sun.security.util.Length;
-
-import java.lang.reflect.WildcardType;
-
 /**
  * @Description:  有序数组的平方
  * @Author: shizuwei
