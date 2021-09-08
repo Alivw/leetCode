@@ -1,5 +1,10 @@
 package demo1;
 
+import com.sun.javafx.sg.prism.NGAmbientLight;
+import sun.security.util.Length;
+
+import java.lang.reflect.WildcardType;
+
 /**
  * @Description:  有序数组的平方
  * @Author: shizuwei
@@ -22,7 +27,7 @@ public class Mian {
      * @Author: shizuwei 2021/8/28 8:28
      */
     public static int[] sortedSquares(int[] nums) {
-        int neg=nums.length;        //第一个非负数的索引
+        int neg = nums.length;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] >= 0) {
                 neg = i;
@@ -30,27 +35,22 @@ public class Mian {
             }
         }
 
-        int left = neg-1, right = neg, index = 0;
+        int left = neg - 1, right = neg, index = 0;
         int[] ans = new int[nums.length];
         while (left >= 0 && right < nums.length) {
             if (nums[left] * nums[left] < nums[right] * nums[right]) {
-                ans[index] = nums[left] * nums[left];
-                left--;
+                ans[index++] = nums[left] * nums[left--];
             }else {
-                ans[index] = nums[right] * nums[right];
-                right++;
+                ans[index++] = nums[right] * nums[right++];
             }
-            index++;
         }
-        while (left >=0) {
-            int temp = nums[left] * nums[left];
-            left--;
-            ans[index++] = temp;
+
+        while (left >= 0) {
+            ans[index++] = nums[left] * nums[left--];
         }
+
         while (right < nums.length) {
-            int temp = nums[right] * nums[right];
-            right++;
-            ans[index++] = temp;
+            ans[index++] = nums[right] * nums[right++];
         }
         return ans;
     }
