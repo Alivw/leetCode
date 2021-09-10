@@ -30,6 +30,7 @@ public class Mian {
 //            }
 //        }
 //
+
 //        int left = neg - 1, right = neg, index = 0;
 //        int[] ans = new int[nums.length];
 //        while (left >= 0 || right < nums.length) {
