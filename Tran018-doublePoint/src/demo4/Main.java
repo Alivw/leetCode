@@ -46,9 +46,8 @@ public class Main {
      * @author: Shi Zuwei on 2021/9/11 14:45
      */
     public int[] twoSum2(int[] numbers, int target) {
-        int i = 0, mid = 0;
-        for (; i < numbers.length; i++) {
-            int left = i + 1, right = numbers.length - 1;
+        for (int i = 0; i < numbers.length; i++) {
+            int left = i + 1, right = numbers.length - 1, mid = 0;
             while (left <= right) {
                 mid = left + (right - left >> 1);
                 if (numbers[mid] == target - numbers[i]) {
@@ -60,7 +59,6 @@ public class Main {
                     right = mid - 1;
             }
         }
-        return new int[]{i + 1, mid + 1};
+        return new int[]{-1, -1};
     }
-
 }
