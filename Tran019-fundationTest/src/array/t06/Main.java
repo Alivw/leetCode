@@ -37,11 +37,9 @@ public class Main {
                 list.add(nums1[left]);
                 left++;
                 right++;
-            }else if (nums1[left] < nums2[right]) {
+            } else if (nums1[left] < nums2[right]) {
                 left++;
             } else right++;
-
-
         }
         int[] res = new int[list.size()];
         for (int i = 0; i < res.length; i++) {
