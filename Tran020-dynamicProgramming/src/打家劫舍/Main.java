@@ -1,7 +1,5 @@
 package 打家劫舍;
 
-import sun.security.util.Length;
-
 /**
  * @Description: 你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
  * <p>
@@ -20,7 +18,7 @@ public class Main {
         for (int i = 0; i < nums.length; i++) {
             if (i % 2 == 0) {
                 sum1 += nums[i];
-            }else
+            } else
                 sum2 += nums[i];
         }
         return sum1 > sum2 ? sum1 : sum2;
