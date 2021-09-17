@@ -14,13 +14,20 @@ public class Main {
 
 
     public int rob(int[] nums) {
-        int sum1 = 0, sum2 = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (i % 2 == 0) {
-                sum1 += nums[i];
-            } else
-                sum2 += nums[i];
+        if (null == nums || nums.length == 0) {
+            return 0;
         }
-        return sum1 > sum2 ? sum1 : sum2;
+
+        if (nums.length == 1) {
+            return nums[0];
+        }
+
+        int f = nums[0], s = Math.max(f, nums[1]);
+        for (int i = 2; i < nums.length; i++) {
+            int temp = s;
+            s = Math.max(f + nums[i], s);
+            f = temp;
+        }
+        return s;
     }
 }
