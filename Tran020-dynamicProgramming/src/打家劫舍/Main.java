@@ -23,6 +23,7 @@ public class Main {
         }
 
         int f = nums[0], s = Math.max(f, nums[1]);
+        // s代表 索引为 i 的时候偷的最大值，f 代表 索引为 i-1 的时候偷的最大值
         for (int i = 2; i < nums.length; i++) {
             int temp = s;
             s = Math.max(f + nums[i], s);
