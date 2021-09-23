@@ -1,5 +1,6 @@
 package demo9;
 
+import java.lang.reflect.WildcardType;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,7 +11,7 @@ import java.util.Set;
  **/
 public class Main {
     public static void main(String[] args) {
-        System.out.println(new Main().lengthOfLongestSubstringReview("pwwkew"));
+        System.out.println(new Main().lengthOfLastWord("Today is a nice day"));
     }
 
 
@@ -77,5 +78,22 @@ public class Main {
             ans = Math.max(ans, rk - left + 1);
         }
         return ans;
+    }
+
+
+    public int lengthOfLastWord(String s) {
+        int count = 0, right = 0, ans = 0;
+        while(right<s.length()){
+
+            if(s.charAt(right)!=' ' ){
+                count++;
+            }else {
+                ans = ans >= count ? ans : count;
+                count = 0;
+            }
+            right++;
+
+        }
+        return ans >= count ? ans : count;
     }
 }
