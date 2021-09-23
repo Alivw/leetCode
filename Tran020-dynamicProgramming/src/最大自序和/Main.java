@@ -11,7 +11,7 @@ public class Main {
     }
 
     /**
-     * 定义dp[i]表示数组中前i+1（注意这里的i是从0开始的）个元素构成的连续子数组的最大和。
+     * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
      * @param: nums
      * @return int
      * @author Shi Zuwei on 2021/9/23 14:25
@@ -26,8 +26,6 @@ public class Main {
          * 3，边界条件判断，当i等于0的时候，也就是前1个元素，他能构成的最大和也就是他自己，所以
          * dp[0]=num[0];
          */
-
-
         int length = nums.length, max = nums[0];
         int[] dp = new int[length];
         dp[0] = nums[0];
