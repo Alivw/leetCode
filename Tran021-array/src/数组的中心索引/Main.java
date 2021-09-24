@@ -21,7 +21,11 @@ public class Main {
      * @author Shi Zuwei on 2021/9/23 15:01
      */
     public static void main(String[] args) {
-        System.out.println(new Main().pivotIndex(new int[]{1, 7, 3, 6, 5, 6}));
+//        System.out.println(new Main().pivotIndex(new int[]{1, 7, 3, 6, 5, 6}));
+        Object o1 = new Object();
+        Object o2 = new Object();
+
+        System.out.println(o1.hashCode() == o2.hashCode()?"Y":"N");
     }
 
     public int pivotIndex(int[] nums) {
