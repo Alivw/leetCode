@@ -1,8 +1,7 @@
 package 数组的中心索引;
 
-import com.sun.javafx.sg.prism.web.NGWebView;
-
-import javax.swing.plaf.metal.MetalIconFactory;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @Description:
@@ -24,13 +23,8 @@ public class Main {
      */
     public static void main(String[] args) {
 //        System.out.println(new Main().pivotIndex(new int[]{1, 7, 3, 6, 5, 6}));
-        Object o1 = new Object();
-        Object o2 = new Object();
 
-        System.out.println(o1.hashCode() == o2.hashCode()?"Y":"N");
 
-        System.out.println("-==============");
-        new Child("mike");
     }
 
     public int pivotIndex(int[] nums) {
