@@ -11,10 +11,24 @@ public class Main {
         int[] arr = new int[]{1, 2, 3, 4};
         ListNode head = new ListNode();
         ListNode list = head;
-        for (int i = 0; i < arr.length; i++) {
-            list.next = new ListNode(arr[i]);
-            list = list.next;
+
+        /**
+         * 尾插法
+         */
+//        for (int i = 0; i < arr.length; i++) {
+//            list.next = new ListNode(arr[i]);
+//            list = list.next;
+//        }
+        /**
+         * 头插法
+         */
+        for (int i=arr.length-1;i>=0;i--) {
+            ListNode node = new ListNode(arr[i]);
+            node.next = head.next;
+            head.next = node;
         }
+
+
         ListNode node = new Main().reverseList(head.next);
         while (null != node) {
             System.out.print(node.val);
