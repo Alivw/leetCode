@@ -22,24 +22,31 @@ public class Main {
      * @author Shi Zuwei on 2021/9/23 15:01
      */
     public static void main(String[] args) {
-//        System.out.println(new Main().pivotIndex(new int[]{1, 7, 3, 6, 5, 6}));
+        System.out.println(new Main().pivotIndex(new int[]{1, 7, 3, 6, 5, 6}));
 
 
     }
 
+    /**
+     * 数组的中心索引
+     * @param: nums
+     * @return int
+     * @author Shi Zuwei on 2021/9/28 11:31
+     */
     public int pivotIndex(int[] nums) {
+
         int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
+        for (int i : nums) {
+            sum += i;
         }
 
-        int s = 0;
+        int leftSum = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (s == sum - s) {
-                return 0;
+            if (leftSum == sum - leftSum-nums[i]) {
+                return i;
             }
+            leftSum += nums[i];
         }
-
         return -1;
     }
 }
