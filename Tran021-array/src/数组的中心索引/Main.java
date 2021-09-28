@@ -23,7 +23,7 @@ public class Main {
      */
     public static void main(String[] args) {
         System.out.println(new Main().pivotIndex(new int[]{1, 7, 3, 6, 5, 6}));
-
+        new Child("1");
 
     }
 
@@ -34,7 +34,9 @@ public class Main {
      * @author Shi Zuwei on 2021/9/28 11:31
      */
     public int pivotIndex(int[] nums) {
-
+        /**
+         * 先计算总和sum，遍历数组，若 sum 减去左边之和 leftSum 返回该索引下标
+         */
         int sum = 0;
         for (int i : nums) {
             sum += i;
