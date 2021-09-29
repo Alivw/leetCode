@@ -22,10 +22,11 @@ public class Main {
         /**
          * 头插法
          */
+        ListNode tempNode;
         for (int i=arr.length-1;i>=0;i--) {
-            ListNode node = new ListNode(arr[i]);
-            node.next = head.next;
-            head.next = node;
+            tempNode = new ListNode(arr[i]);
+            tempNode.next = head.next;
+            head.next = tempNode;
         }
 
 
