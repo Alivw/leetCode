@@ -21,7 +21,8 @@ public class Main {
      * @author Shi Zuwei on 2021/9/29 14:57
      */
     public int numWays(int n) {
-        if(n<3) return n==0?1:n;
+        if(n<3)
+            return n==0?1:n;
         int start =1,end=2;
         for(int i =3;i<=n;i++){
             int temp =end;
