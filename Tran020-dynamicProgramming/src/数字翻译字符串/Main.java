@@ -32,7 +32,6 @@ public class Main {
             nums[--index] = num % 10;
             num /= 10;
         }
-//        nums[index] = num;
         int[] dp = new int[length+1];
         dp[0] = 1;
         dp[1] = 1;
