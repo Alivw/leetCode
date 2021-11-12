@@ -40,6 +40,5 @@ public class Main {
             }
         }
         return f[m - 1][n - 1];
-
     }
 }
