@@ -8,7 +8,11 @@ package huiwen;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(new Main().longestPalindrome("babad"));
+//        System.out.println(new Main().longestPalindrome("babad"));
+
+
+
+        System.out.println(new Main().countConsistentStrings("fstqyienx", new String[]{"n","eeitfns","eqqqsfs","i","feniqis","lhoa","yqyitei","sqtn","kug","z","neqqis"}));
     }
 
 
@@ -71,4 +75,25 @@ public class Main {
     }
 
 
+
+
+    public int countConsistentStrings(String allowed, String[] words) {
+        int res=0;
+        for(int i =0;i<words.length;i++){
+
+            boolean flag = true;
+            for(int j =0;j<words[i].length();j++){
+                if (allowed.indexOf(words[i].charAt(j)) == -1) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if (flag) {
+                res++;
+            }
+
+        }
+        return res;
+    }
 }
