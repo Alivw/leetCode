@@ -1,7 +1,5 @@
 package fenzhi;
 
-import java.lang.reflect.WildcardType;
-
 /**
  * @Description: 分治法
  * @Author: jalivv
