@@ -2,7 +2,7 @@ package fenzhi;
 
 /**
  * @Description: 分治法
- * @Author: Awei
+ * @Author: jalivv
  * @Create: 2021-05-03 15:28
  **/
 public class Main {
