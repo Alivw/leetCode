@@ -1,5 +1,7 @@
 package fenzhi;
 
+import java.lang.reflect.WildcardType;
+
 /**
  * @Description: 分治法
  * @Author: jalivv
@@ -33,13 +35,12 @@ public class Main {
     private static String commonPrefix(String lcpLeft, String lcpRight) {
 //        int minlen = Math.min(lcpLeft.length(), lcpRight.length());
         int minLen = lcpLeft.length() <= lcpRight.length() ? lcpLeft.length() : lcpRight.length();
-        for (int i = 0; i < minLen; i++) {
-            if (lcpLeft.charAt(i) != lcpRight.charAt(i)) {
-                return lcpLeft.substring(0, i);
-            }
-
+        int index = 0;
+        while (index < minLen && lcpLeft.charAt(index) == lcpRight.charAt(index)) {
+            index++;
         }
-        return lcpLeft.substring(0, minLen);
+
+        return lcpLeft.substring(0, index);
     }
 
 }
