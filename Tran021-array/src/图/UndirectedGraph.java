@@ -1,7 +1,7 @@
 package 图;
 
 /**
- * @Description
+ * @Description 无向图
  * @Created: with IntelliJ IDEA.
  * @Author jalivv
  * @createTime 2022/1/20 10:54

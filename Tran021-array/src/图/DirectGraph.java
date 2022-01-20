@@ -1,10 +1,5 @@
 package 图;
 
-import sun.tools.jconsole.Worker;
-
-import java.time.temporal.Temporal;
-import java.util.TreeMap;
-
 /**
  * @Description 有向图
  * @Created: with IntelliJ IDEA.
@@ -65,7 +60,12 @@ public class DirectGraph<T> extends AbstractGraph<T> {
         }
     }
 
-
+    /**
+     * 与该顶点有边的下一个顶点
+     *
+     * @param row
+     * @return
+     */
     private int firstAdjVex(int row) {
         for (int i = 0; i < this.vertexSize; i++) {
             if (this.edges[row][i] == 1 && !this.visited[i]) {
