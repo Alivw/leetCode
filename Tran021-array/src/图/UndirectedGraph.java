@@ -1,5 +1,8 @@
 package 图;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @Description 无向图
  * @Created: with IntelliJ IDEA.
@@ -11,6 +14,7 @@ public class UndirectedGraph<T> extends AbstractGraph<T> {
 
     /**
      * 调用父类的构造方法
+     *
      * @param n
      */
     public UndirectedGraph(int n) {
@@ -61,9 +65,13 @@ public class UndirectedGraph<T> extends AbstractGraph<T> {
      */
     @Override
     public void DFS() {
+        for (int i = 0; i < vertexSize; i++) {
+            visited[i] = false;
+        }
         //这里是从第一上添加的顶点开始搜索
         DFS(0);
     }
+
 
     private void DFS(int i) {
         visited[i] = true;
@@ -90,4 +98,34 @@ public class UndirectedGraph<T> extends AbstractGraph<T> {
         return -1;
     }
 
+    /**
+     * 广度优先遍历算法 Breadth-first search（非递归）
+     */
+    @Override
+    public void BFS() {
+        // LinkedList实现了Queue接口 FIFO
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < vertexSize; i++) {
+            visited[i] = false;
+        }
+        for (int i = 0; i < this.vertexSize; i++) {
+            // 该顶点未被访问
+            if (!this.visited[i]) {
+                queue.add(i);
+                visited[i] = true;
+                System.out.print(this.vertexesArray[i] + " ");
+                while (!queue.isEmpty()) {
+                    int row = queue.remove();
+                    int j = firstAdjVex(row);
+                    while (j != -1) {
+                        queue.add(j);
+                        visited[j] = true;
+                        System.out.print(vertexesArray[j]+" ");
+                        j = firstAdjVex(row);
+                    }
+                }
+
+            }
+        }
+    }
 }

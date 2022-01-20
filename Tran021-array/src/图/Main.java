@@ -31,8 +31,10 @@ public class Main {
         g.addEdge("D", "F");
         g.addEdge("E", "F");
         g.printEdges();
-        System.out.println("深度优先遍历：");
+        System.out.println("无向图深度优先遍历：");
         g.DFS();
+        System.out.println("\n无向图广度度优先遍历：");
+        g.BFS();
         System.out.println("\n======================");
 
         Graph<String> g1 = new DirectGraph<>(str.length);
@@ -47,7 +49,10 @@ public class Main {
         g1.addEdge("D", "F");
         g1.printEdges();
 
+        System.out.println("无向图深度优先遍历：");
         g1.DFS();
+        System.out.println("\n无向图广度度优先遍历：");
+        g1.BFS();
 
     }
 }

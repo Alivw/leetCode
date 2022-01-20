@@ -35,4 +35,8 @@ public interface Graph<T> {
     void DFS();
 
 
+    /**
+     * 广度优先遍历算法 Breadth-first search（非递归）
+     */
+    void BFS();
 }

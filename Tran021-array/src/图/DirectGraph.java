@@ -1,5 +1,8 @@
 package 图;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @Description 有向图
  * @Created: with IntelliJ IDEA.
@@ -47,6 +50,9 @@ public class DirectGraph<T> extends AbstractGraph<T> {
 
     @Override
     public void DFS() {
+        for (int i = 0; i < vertexSize; i++) {
+            visited[i] = false;
+        }
         DFS(0);
     }
 
@@ -73,5 +79,36 @@ public class DirectGraph<T> extends AbstractGraph<T> {
             }
         }
         return -1;
+    }
+
+    /**
+     * 广度优先遍历算法 Breadth-first search（非递归）
+     */
+    @Override
+    public void BFS() {
+        // LinkedList实现了Queue接口 FIFO
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < vertexSize; i++) {
+            visited[i] = false;
+        }
+        for (int i = 0; i < this.vertexSize; i++) {
+            // 该顶点未被访问
+            if (!this.visited[i]) {
+                queue.add(i);
+                visited[i] = true;
+                System.out.print(this.vertexesArray[i]+" ");
+                while (!queue.isEmpty()) {
+                    int row = queue.remove();
+                    int j = firstAdjVex(row);
+                    while (j != -1) {
+                        queue.add(j);
+                        visited[j] = true;
+                        System.out.print(vertexesArray[j]+" ");
+                        j = firstAdjVex(row);
+                    }
+                }
+
+            }
+        }
     }
 }
