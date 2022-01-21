@@ -21,24 +21,15 @@ public class UndirectedGraph<T> extends AbstractGraph<T> {
         super(n);
     }
 
-    /**
-     * 初始化顶点
-     *
-     * @param arr
-     */
-    @Override
-    public void initVertexes(T[] arr) {
-        this.vertexesArray = arr;
-    }
 
     @Override
     public void addEdge(T a, T b) {
         int aIndex = -1, bIndex = -1;
-        for (int i = 0; i < vertexesArray.length; i++) {
-            if (vertexesArray[i].equals(a)) {
+        for (int i = 0; i < vertexSize; i++) {
+            if (vertexesArray.get(i).equals(a)) {
                 aIndex = i;
             }
-            if (vertexesArray[i].equals(b)) {
+            if (vertexesArray.get(i).equals(b)) {
                 bIndex = i;
             }
         }
@@ -75,7 +66,7 @@ public class UndirectedGraph<T> extends AbstractGraph<T> {
 
     private void DFS(int i) {
         visited[i] = true;
-        System.out.print(vertexesArray[i] + " ");
+        System.out.print(vertexesArray.get(i) + " ");
         int j = firstAdjVex(i);
         while (j != -1) {
             DFS(j);
@@ -91,7 +82,7 @@ public class UndirectedGraph<T> extends AbstractGraph<T> {
      * @return
      */
     private int firstAdjVex(int row) {
-        for (int column = 0; column < vertexesArray.length; column++) {
+        for (int column = 0; column < vertexSize; column++) {
             if (this.edges[row][column] == 1 && !visited[column])
                 return column;
         }
@@ -113,19 +104,32 @@ public class UndirectedGraph<T> extends AbstractGraph<T> {
             if (!this.visited[i]) {
                 queue.add(i);
                 visited[i] = true;
-                System.out.print(this.vertexesArray[i] + " ");
+                System.out.print(vertexesArray.get(i) + " ");
                 while (!queue.isEmpty()) {
                     int row = queue.remove();
                     int j = firstAdjVex(row);
                     while (j != -1) {
                         queue.add(j);
                         visited[j] = true;
-                        System.out.print(vertexesArray[j]+" ");
+                        System.out.print(vertexesArray.get(j)+" ");
                         j = firstAdjVex(row);
                     }
                 }
 
             }
         }
+    }
+
+
+    @Override
+    public String getGraphType() {
+        return "无向联通图";
+    }
+
+
+
+    @Override
+    public void insert(T t) {
+
     }
 }

@@ -16,6 +16,18 @@ public interface Graph<T> {
     void initVertexes(T[] arr);
 
     /**
+     * 获取图对类型
+     * @return
+     */
+    String getGraphType();
+
+    /**
+     * 获取顶点数量
+     * @return
+     */
+    int getVexNum();
+
+    /**
      * 添加边的信息
      *
      * @param a
@@ -39,4 +51,18 @@ public interface Graph<T> {
      * 广度优先遍历算法 Breadth-first search（非递归）
      */
     void BFS();
+
+    /**
+     * 获取图中边的数量
+     * @return
+     */
+    int getEdgeNum();
+
+    /**
+     * 向图中添加一个顶点
+     * @param t
+     */
+    void insert(T t);
+
+
 }

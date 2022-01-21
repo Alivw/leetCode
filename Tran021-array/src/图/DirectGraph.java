@@ -19,19 +19,20 @@ public class DirectGraph<T> extends AbstractGraph<T> {
         super(n);
     }
 
+
     @Override
-    public void initVertexes(T[] arr) {
-        this.vertexesArray = arr;
+    public String getGraphType() {
+        return "有向联通图";
     }
 
     @Override
     public void addEdge(T a, T b) {
         int aIndex = -1, bIndex = -1;
         for (int i = 0; i < this.vertexSize; i++) {
-            if (this.vertexesArray[i].equals(a)) {
+            if (vertexesArray.get(i).equals(a)) {
                 aIndex = i;
             }
-            if (this.vertexesArray[i].equals(b)) {
+            if (vertexesArray.get(i).equals(b)) {
                 bIndex = i;
             }
         }
@@ -58,7 +59,7 @@ public class DirectGraph<T> extends AbstractGraph<T> {
 
     private void DFS(int i) {
         this.visited[i] = true;
-        System.out.print(this.vertexesArray[i]+" ");
+        System.out.print(vertexesArray.get(i)+" ");
         int j = firstAdjVex(i);
         while (j != -1) {
             DFS(j);
@@ -96,14 +97,14 @@ public class DirectGraph<T> extends AbstractGraph<T> {
             if (!this.visited[i]) {
                 queue.add(i);
                 visited[i] = true;
-                System.out.print(this.vertexesArray[i]+" ");
+                System.out.print(vertexesArray.get(i)+" ");
                 while (!queue.isEmpty()) {
                     int row = queue.remove();
                     int j = firstAdjVex(row);
                     while (j != -1) {
                         queue.add(j);
                         visited[j] = true;
-                        System.out.print(vertexesArray[j]+" ");
+                        System.out.print(vertexesArray.get(j)+" ");
                         j = firstAdjVex(row);
                     }
                 }
@@ -111,4 +112,5 @@ public class DirectGraph<T> extends AbstractGraph<T> {
             }
         }
     }
+
 }
