@@ -26,17 +26,15 @@ public class Main {
         while (lo < hi) {
             int mid = lo + (hi - lo) / 2;
             /**
-             * 从 mid 到 hi 的个数
-             * 当 num[mid-1]== num[mid]
-             *      个数为偶数时：搜索区间为右区间，
-             *      个数为奇数时：搜索区间为左区间
+             * 索引 mid 右边到 hi 到元素个数
              * 当 num[mid]==num[mid+1]
-             *      个数为偶数时：搜索区间为左区间
+             *      个数为偶数时：搜索区间为右区间
+             *      个数为奇数时：搜索区间为左区间
+             * 当 num[mid-1]== num[mid]
+             *      个数为偶数时：搜索区间为左区间，
              *      个数为奇数时：搜索区间为右区间
-             *
              */
             boolean halvesAreEven = (hi - mid) % 2 == 0;
-
             if (nums[mid] == nums[mid + 1]) {
                 //  i i i i i
                 if (halvesAreEven) {
@@ -46,7 +44,6 @@ public class Main {
                     hi = mid - 1;
                 }
             } else if (nums[mid] == nums[mid - 1]) {
-
                 // i   i i i i
                 if (halvesAreEven) {
                     // 在左区间
@@ -57,10 +54,7 @@ public class Main {
             } else {
                 return nums[mid];
             }
-
         }
-
-
         return nums[hi];
     }
 }
