@@ -22,7 +22,7 @@ public class Main {
         ListNode newHead = head.next;
         head.next = swapPairs(newHead.next);
         newHead.next = head;
-        return head;
+        return newHead;
     }
 }
 
