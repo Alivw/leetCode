@@ -42,10 +42,3 @@ class CQueue {
         return stack2.isEmpty() ? -1 : stack2.pop();
     }
 }
-
-/**
- * Your CQueue object will be instantiated and called as such:
- * CQueue obj = new CQueue();
- * obj.appendTail(value);
- * int param_2 = obj.deleteHead();
- */
