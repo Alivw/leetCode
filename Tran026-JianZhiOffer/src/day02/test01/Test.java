@@ -1,5 +1,7 @@
 package day02.test01;
 
+import day02.ListNode;
+
 import java.util.Stack;
 
 /**
@@ -63,13 +65,5 @@ public class Test {
     }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode(int x,ListNode next) {
-        val = x;
-        this.next = next;
-    }
-}
 
