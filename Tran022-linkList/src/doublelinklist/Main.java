@@ -18,7 +18,48 @@ public class Main {
 
         for (int i = 0; i < 10; i++) {
             System.out.println(jlist.contains(new Node(i)));
-
         }
+
+        new Main().deleteNode(new ListNode(3, new ListNode(1, new ListNode(5, new ListNode(9, null)))), 9);
+    }
+
+
+    /**
+     * 删除链表中的元素
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode deleteNode(ListNode head, int val) {
+        ListNode node = head;
+        if (node.val == val) {
+            return head.next;
+        }
+
+
+        while (node.next != null && node.next.val != val) {
+            node = node.next;
+        }
+        if (node.next != null) {
+            node.next = node.next.next;
+        }
+
+
+
+        return head;
+    }
+}
+
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+
+    public ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
     }
 }
