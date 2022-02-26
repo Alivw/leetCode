@@ -1,9 +1,5 @@
 package demo01;
 
-import com.apple.eawt.AppEvent;
-import jdk.jfr.internal.WriteableUserPath;
-
-import java.time.temporal.Temporal;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
