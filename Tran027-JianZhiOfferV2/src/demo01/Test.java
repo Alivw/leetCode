@@ -111,6 +111,32 @@ public class Test {
     }
 
 
+    /**
+     * 102. 二叉树的层序遍历
+     * 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。
+     *
+     * @param root
+     * @return
+     */
+    public List<List<Integer>> levelOrder1(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null) return res;
+        Queue<TreeNode> queue = new LinkedList();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            List<Integer> temp = new ArrayList<>();
+            for (int i = queue.size(); i > 0; i--) {
+                TreeNode node = queue.poll();
+                temp.add(node.val);
+                if (node.left != null) queue.add(node.left);
+                if(node.right!=null) queue.add(node.right);
+            }
+            res.add(temp);
+        }
+        return res;
+    }
+
+
 }
 
 
