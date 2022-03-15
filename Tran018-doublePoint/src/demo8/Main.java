@@ -1,6 +1,8 @@
 package demo8;
 
 
+import java.util.List;
+
 /**
  * @Description:
  * @Author: shizuwei
@@ -97,5 +99,27 @@ public class Main {
             int temp = fun(arr, i + 1, n);
             return arr[i] > temp ? arr[i] : temp;
         }
+    }
+
+
+    /**
+     * 输出倒数第k个节点
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode getKthFromEnd(ListNode head, int k) {
+        ListNode n =head;
+        int len = 0;
+        while (n != null) {
+            len++;
+            n = n.next;
+        }
+        int idx = len - k ;
+        n=head;
+        while (idx-- > 0) {
+            n = n.next;
+        }
+        return n;
     }
 }
