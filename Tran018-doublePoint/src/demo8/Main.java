@@ -25,7 +25,7 @@ public class Main {
          * 头插法
          */
         ListNode tempNode;
-        for (int i=arr.length-1;i>=0;i--) {
+        for (int i = arr.length - 1; i >= 0; i--) {
             tempNode = new ListNode(arr[i]);
             tempNode.next = head.next;
             head.next = tempNode;
@@ -37,7 +37,7 @@ public class Main {
             System.out.print(node.val);
             node = node.next;
         }
-        System.out.println("\n"+new Main().fun(arr, 2, 3));
+        System.out.println("\n" + new Main().fun(arr, 2, 3));
 
     }
 
@@ -86,16 +86,17 @@ public class Main {
 
     /**
      * 秦润面试题
-     * @param: arr
+     *
      * @param i
      * @param n
      * @return int
+     * @param: arr
      * @author Shi Zuwei on 2021/9/15 17:26
      */
     public int fun(int arr[], int i, int n) {
         if (i == n - 1) {
             return arr[i];
-        }else{
+        } else {
             int temp = fun(arr, i + 1, n);
             return arr[i] > temp ? arr[i] : temp;
         }
@@ -104,22 +105,67 @@ public class Main {
 
     /**
      * 输出倒数第k个节点
+     *
      * @param head
      * @param k
      * @return
      */
     public ListNode getKthFromEnd(ListNode head, int k) {
-        ListNode n =head;
+        ListNode n = head;
         int len = 0;
         while (n != null) {
             len++;
             n = n.next;
         }
-        int idx = len - k ;
-        n=head;
+        int idx = len - k;
+        n = head;
         while (idx-- > 0) {
             n = n.next;
         }
         return n;
     }
+
+    /**
+     * 输出倒数第k个节点 (双指针法)
+     *
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode getKthFromEndByDoublePoint(ListNode head, int k) {
+        ListNode fast =head,slow =head;
+        while (fast != null && k-- > 0) {
+            fast = fast.next;
+        }
+
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return slow;
+    }
+
+    /**
+     * 合并两个有序列表
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dump = new ListNode(0), curr = dump;
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                curr.next = l1;
+                l1 = l1.next;
+            }
+            else {
+                curr.next=l2;
+                l2 = l2.next;
+            }
+        }
+
+        curr.next = l1 != null ? l1 : l2;
+        return dump.next;
+    }
+
 }
