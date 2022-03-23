@@ -38,5 +38,6 @@ public class Main {
      */
     public boolean isSubsequence1(String s, String t) {
         // TODO 不会写
+        return false;
     }
 }
