@@ -4,7 +4,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(maxCntWord("BABBACACCDD"));
+        System.out.println(maxCntWord("BABBACACDDF"));
+        System.out.println(maxCntWord1("BABBACACDDF"));
     }
 
     public static String maxCntWord(String s) {
@@ -31,5 +32,22 @@ public class Main {
         return sb.toString();
 
 
+    }
+
+    public static String maxCntWord1(String s) {
+        char[] chs = s.toCharArray();
+        int[] arr = new int[26];
+        int max = 0;
+        for (char ch : chs) {
+            arr[ch - 'A']++;
+            max = Math.max(max, arr[ch - 'A']);
+        }
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == max) {
+                builder.append((char) ('A'+i));
+            }
+        }
+        return builder.toString();
     }
 }
