@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Tran001-DeleteMidNode/Tran001-DeleteMidNode.iml" filepath="$PROJECT_DIR$/Tran001-DeleteMidNode/Tran001-DeleteMidNode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran002-MaxNumber/Tran002-MaxNumber.iml" filepath="$PROJECT_DIR$/Tran002-MaxNumber/Tran002-MaxNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran003-subtractProductAndSum/Tran003-subtractProductAndSum.iml" filepath="$PROJECT_DIR$/Tran003-subtractProductAndSum/Tran003-subtractProductAndSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran004-NumJewelsInStones/Tran004-NumJewelsInStones.iml" filepath="$PROJECT_DIR$/Tran004-NumJewelsInStones/Tran004-NumJewelsInStones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran005-MergeInBetween/Tran005-MergeInBetween.iml" filepath="$PROJECT_DIR$/Tran005-MergeInBetween/Tran005-MergeInBetween.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran006-FrogJumpStage/Tran006-FrogJumpStage.iml" filepath="$PROJECT_DIR$/Tran006-FrogJumpStage/Tran006-FrogJumpStage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran007-OnlyOnceNum/Tran007-OnlyOnceNum.iml" filepath="$PROJECT_DIR$/Tran007-OnlyOnceNum/Tran007-OnlyOnceNum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran008-RemoveElement/Tran008-RemoveElement.iml" filepath="$PROJECT_DIR$/Tran008-RemoveElement/Tran008-RemoveElement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran009-ReverseNum/Tran009-ReverseNum.iml" filepath="$PROJECT_DIR$/Tran009-ReverseNum/Tran009-ReverseNum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran010-arraySign/Tran010-arraySign.iml" filepath="$PROJECT_DIR$/Tran010-arraySign/Tran010-arraySign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran011-XorOperation/Tran011-XorOperation.iml" filepath="$PROJECT_DIR$/Tran011-XorOperation/Tran011-XorOperation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran012-SmallerNumbersThanCurrent/Tran012-SmallerNumbersThanCurrent.iml" filepath="$PROJECT_DIR$/Tran012-SmallerNumbersThanCurrent/Tran012-SmallerNumbersThanCurrent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran013-SqrtNum/Tran013-SqrtNum.iml" filepath="$PROJECT_DIR$/Tran013-SqrtNum/Tran013-SqrtNum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran014-2LinkListToInt/Tran014-2LinkListToInt.iml" filepath="$PROJECT_DIR$/Tran014-2LinkListToInt/Tran014-2LinkListToInt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran015-longestCommonPrefix/Tran015-longestCommonPrefix.iml" filepath="$PROJECT_DIR$/Tran015-longestCommonPrefix/Tran015-longestCommonPrefix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran016-BinaryTreeDepth/Tran016-BinaryTreeDepth.iml" filepath="$PROJECT_DIR$/Tran016-BinaryTreeDepth/Tran016-BinaryTreeDepth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran017-BinariSearch/Tran017-BinariSearch.iml" filepath="$PROJECT_DIR$/Tran017-BinariSearch/Tran017-BinariSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran018-doublePoint/Tran018-doublePoint.iml" filepath="$PROJECT_DIR$/Tran018-doublePoint/Tran018-doublePoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran019-fundationTest/Tran019-fundationTest.iml" filepath="$PROJECT_DIR$/Tran019-fundationTest/Tran019-fundationTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran020-dynamicProgramming/Tran020-dynamicProgramming.iml" filepath="$PROJECT_DIR$/Tran020-dynamicProgramming/Tran020-dynamicProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran021-array/Tran021-array.iml" filepath="$PROJECT_DIR$/Tran021-array/Tran021-array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran022-linkList/Tran022-linkList.iml" filepath="$PROJECT_DIR$/Tran022-linkList/Tran022-linkList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran023-tree/Tran023-tree.iml" filepath="$PROJECT_DIR$/Tran023-tree/Tran023-tree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran024-maxTriangleLength/Tran024-maxTriangleLength.iml" filepath="$PROJECT_DIR$/Tran024-maxTriangleLength/Tran024-maxTriangleLength.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran025-String/Tran025-String.iml" filepath="$PROJECT_DIR$/Tran025-String/Tran025-String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran026-JianZhiOffer/Tran026-JianZhiOffer.iml" filepath="$PROJECT_DIR$/Tran026-JianZhiOffer/Tran026-JianZhiOffer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tran027-JianZhiOfferV2/Tran027-JianZhiOfferV2.iml" filepath="$PROJECT_DIR$/Tran027-JianZhiOfferV2/Tran027-JianZhiOfferV2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/leetCode.iml" filepath="$PROJECT_DIR$/.idea/leetCode.iml" />
+    </modules>
+  </component>
+</project>
