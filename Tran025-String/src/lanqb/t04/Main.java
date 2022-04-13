@@ -20,15 +20,20 @@ import java.util.Arrays;
  */
 public class Main {
     public static void main(String[] args) {
-        int[] shuati = shuati(6, new int[]{12, 10, 15, 20, 6,8});
+        int N = 6;
+        int[] ints = {12, 10, 15, 20, 6, 8};
+        int[] shuati = shuati(N, ints);
         for (int i : shuati) {
-            System.out.print(i+" ");
+            System.out.print(i + " ");
         }
+        System.out.println();
+        shuati1(N, ints);
     }
 
     /**
      * 比他多的学生数不超过刷题比他少的学生数 duo <= shao
-     * @param n 有多少人
+     *
+     * @param n    有多少人
      * @param pros 每个人刷的题目数
      * @return
      */
@@ -49,9 +54,9 @@ public class Main {
                 }
             }
 
-            if(duo<=shao){
-                ans[i]=0;
-            }else {
+            if (duo <= shao) {
+                ans[i] = 0;
+            } else {
                 int offset = (duo - shao) % 2 == 0 ? (duo - shao) / 2 : (duo - shao) / 2 + 1;
                 int[] temps = Arrays.copyOf(pros, pros.length);
                 Arrays.sort(temps);
@@ -67,5 +72,22 @@ public class Main {
 
         }
         return ans;
+    }
+
+    public static void shuati1(int n, int[] pros) {
+        int[] find = Arrays.copyOf(pros, pros.length);
+        Arrays.sort(find);
+
+        for (int i = 0; i < n; i++) {
+            int pos = Arrays.binarySearch(find, pros[i]);
+            int less = pos;
+            int more = n - pos - 1;
+            if (more > less) {
+                int offset = (more - less) % 2 == 0 ? (more - less) / 2 : (more - less) / 2 + 1;
+                int num = find[pos + offset] - find[pos] + 1;
+                System.out.print(num + " ");
+            } else
+                System.out.print(0 + " ");
+        }
     }
 }
